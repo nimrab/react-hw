@@ -1,0 +1,13 @@
+.btn {
+    width: 60px;
+    height: 30px;
+    margin: 5px;
+    color: darkolivegreen;
+    border-radius: 15px;
+}
+
+.btn:hover {
+    font-weight: 700;
+}
+
+

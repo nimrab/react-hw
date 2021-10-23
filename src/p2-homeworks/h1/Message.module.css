@@ -1,0 +1,68 @@
+.main {
+    display: flex;
+    align-items: flex-end;
+}
+
+.round_div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100px;
+    height: 100px;
+    border-radius: 18px;
+    z-index: 1;
+    background-color: white;
+}
+
+.img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: blue;
+    /*outline: 1px solid blue;*/
+}
+
+.message_box {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 10px;
+    background-color: black;
+    /*min-height: 70px;*/
+    border-radius: 5px;
+}
+
+.name {
+    color: mediumpurple;
+    font-weight: bold;
+    padding-bottom: 5px;
+    /*outline: 1px solid blue;*/
+}
+
+.message {
+    color: lightcyan;
+    margin-bottom: 5px;
+    width: 300px;
+    /*outline: 1px solid blue;*/
+    margin-right: 10px;
+    word-wrap: break-word;
+}
+
+
+.time {
+    color: white;
+    position: relative;
+    right: -280px;
+    top: -8px;
+    z-index: 2;
+    color: darkolivegreen;
+}
+
+.bubble_div {
+    position: relative;
+    left: -34px;
+    background-color: black;
+    height: 15px;
+    /*outline: 1px solid blue;*/
+
+}

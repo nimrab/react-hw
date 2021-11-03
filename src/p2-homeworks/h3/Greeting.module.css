@@ -1,7 +1,51 @@
-.someClass {
-
-}
-
 .error {
     border: 1px solid red;
+}
+
+.throwError {
+    color: red;
+}
+
+.main {
+
+    margin: 50px;
+}
+
+.btn {
+    margin-left: 20px;
+    width: 60px;
+    height: 31px;
+    background-color: rgba(169, 253, 0, 0.34);
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn_err {
+    background-color: rgba(253, 0, 59, 0.34);
+    cursor: default;
+    color: #969292;
+    border-style: none;
+    outline: none;
+}
+
+.input_css {
+    height: 25px;
+}
+
+.input_css:focus {
+   outline: none;
+}
+
+.div_create {
+    margin-bottom: 10px;
+}
+
+
+.empty_div {
+    height: 20px;
+}
+
+.user_qty {
+    margin-left: 20px;
 }

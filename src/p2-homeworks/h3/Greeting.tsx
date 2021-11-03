@@ -1,28 +1,39 @@
-import React from 'react'
-import s from './Greeting.module.css'
+import React, {ChangeEvent, KeyboardEvent} from 'react'
+import css from './Greeting.module.css'
 
 type GreetingPropsType = {
-    name: any // need to fix any
-    setNameCallback: any // need to fix any
-    addUser: any // need to fix any
-    error: any // need to fix any
-    totalUsers: any // need to fix any
+    name: string // need to fix any
+    setNameCallback: (event: ChangeEvent<HTMLInputElement>) => void// need to fix any
+    addUser: () => void // need to fix any
+    error: boolean // need to fix any
+    totalUsers: number // need to fix any
+    addUserByEnterCallback: (event: KeyboardEvent<HTMLInputElement>) => void
 }
 
 // презентационная компонента (для верстальщика)
-const Greeting: React.FC<GreetingPropsType> = (
-    {name, setNameCallback, addUser, error, totalUsers} // деструктуризация пропсов
+export const Greeting: React.FC<GreetingPropsType> = (
+    {name, setNameCallback, addUser, error, totalUsers, addUserByEnterCallback} // деструктуризация пропсов
 ) => {
-    const inputClass = s.error // need to fix with (?:)
+    const inputClass = error ? css.error : "" // need to fix with (?:)
+    const btnErrorClass = error ? css.btn_err : ""
+
+    const throwError = error
+        ? <div className={css.throwError}>Invalid name</div>
+        : <div className={css.empty_div}></div>
 
     return (
-        <div>
-            <input value={name} onChange={setNameCallback} className={inputClass}/>
-            <span>{error}</span>
-            <button onClick={addUser}>add</button>
-            <span>{totalUsers}</span>
+        <div className={css.main}>
+            <div className={css.div_create}>Create new user:</div>
+            <input
+                value={name}
+                onChange={setNameCallback}
+                onKeyPress={addUserByEnterCallback}
+                className={inputClass + ' ' + css.input_css}
+            />
+            <button onClick={addUser} className={css.btn + ' ' + btnErrorClass}>add</button>
+            <span className={css.user_qty}>( User QTY: {totalUsers} )</span>
+            {throwError}
         </div>
     )
 }
 
-export default Greeting

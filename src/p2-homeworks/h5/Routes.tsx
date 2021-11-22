@@ -3,6 +3,7 @@ import PreJunior from "./pages/PreJunior";
 import {Junior} from "./pages/Junior";
 import {JuniorPlus} from "./pages/JuniorPlus";
 import {Route, Switch, Redirect} from "react-router-dom";
+import Error404 from "./pages/Error404";
 
 export const PATH = {
     PRE_JUNIOR: '/pre-junior',
@@ -24,8 +25,9 @@ function Routes() {
             <Switch>
                 <Route path={PATH.DEFAULT} exact render={() => <Redirect to={PATH.PRE_JUNIOR}/>}/>
                 <Route path={PATH.PRE_JUNIOR} exact component={PreJunior}/>
-                <Route path={PATH.JUNIOR} exact component={PreJunior}/>
-                <Route path={PATH.JUNIOR_PLUS} exact component={PreJunior}/>
+                <Route path={PATH.JUNIOR} exact component={Junior}/>
+                <Route path={PATH.JUNIOR_PLUS} exact component={JuniorPlus}/>
+                <Route render={()=> <Error404/>}/>
             </Switch>
 
 

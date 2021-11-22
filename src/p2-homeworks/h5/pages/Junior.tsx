@@ -4,7 +4,7 @@ import React from "react";
 export const Junior = () => {
 
     return (
-        <div></div>
+        <div>Hello! This is Junior tasks</div>
 
     )
 

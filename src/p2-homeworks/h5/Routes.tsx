@@ -9,7 +9,7 @@ export const PATH = {
     PRE_JUNIOR: '/pre-junior',
     JUNIOR: '/junior',
     JUNIOR_PLUS: '/junior-plus',
-    DEFAULT: '/react-hw',
+    DEFAULT: '/react_tasks',
     // add paths
 }
 

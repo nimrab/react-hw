@@ -26,19 +26,20 @@ function HW1() {
     return (
         <div>
             <hr/>
-            homeworks 1
+            {/*HTML input text style*/}
 
-            {/*should work (должно работать)*/}
+            {/*/!*should work (должно работать)*!/*/}
 
-            <Message
-                avatar={messageData.avatar}
-                name={messageData.name}
-                message={messageData.message}
-                time={messageData.time}
-            />
+            {/*<Message*/}
+            {/*    avatar={messageData.avatar}*/}
+            {/*    name={messageData.name}*/}
+            {/*    message={messageData.message}*/}
+            {/*    time={messageData.time}*/}
+            {/*/>*/}
 
 
-            <hr/>
+            {/*<hr/>*/}
+            HTML input text style
             {/*для личного творчества, могу проверить*/}
             <Message
                 avatar={altMessage.avatar}

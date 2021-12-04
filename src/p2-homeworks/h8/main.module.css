@@ -1,0 +1,9 @@
+.name {
+    display: inline-block;
+    width: 150px;
+    padding: 5px;
+}
+
+.user {
+    color: rgb(8, 92, 107);
+}

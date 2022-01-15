@@ -1,0 +1,19 @@
+.btn {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+.time {
+    width: 150px;
+    height: 40px;
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.date {
+    font-size: 18px;
+    font-weight: 700;
+}

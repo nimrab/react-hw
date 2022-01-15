@@ -7,7 +7,7 @@ function Clock() {
 
 
     const [timerId, setTimerId] = useState<number>(0)
-    const [time, setTime] = useState<string>(stringTime())
+    const [time, setTime] = useState<Date>()
     const [show, setShow] = useState<boolean>(false)
 
     const stop = () => {
@@ -18,20 +18,23 @@ function Clock() {
         stop()
         const id: number = window.setInterval(() => {
             // setDate
-            setTime(stringTime())
-            console.log(id)
+            setTime(new Date())
         }, 1000)
         setTimerId(id)
     }
 
 
-    function stringTime(): string {
+/*
+    function stringTimeFunc(): string {
         const hours: string = new Date().getHours().toString().length === 1 ? '0' + new Date().getHours().toString() : new Date().getHours().toString()
         const minutes: string = new Date().getMinutes().toString().length === 1 ? '0' + new Date().getMinutes().toString() : new Date().getMinutes().toString()
         const seconds: string = new Date().getSeconds().toString().length === 1 ? '0' + new Date().getSeconds().toString() : new Date().getSeconds().toString()
 
         return hours + ':' + minutes + ':' + seconds
     }// fix with date
+
+
+*/
 
 
     const onMouseEnter = () => {
@@ -46,7 +49,9 @@ function Clock() {
 
 
 
-    const stringDate = new Date().getDate().toString() + '.' + new Date().getMonth().toString() + 1 + '.' + new Date().getFullYear().toString() // fix with date
+   //const stringDate = new Date().getDate().toString() + '.' + new Date().getMonth().toString() + 1 + '.' + new Date().getFullYear().toString() // fix with date
+   const stringDateImproved = new Date().toLocaleDateString() // берем текущую дату и по фрмату даты ОС пользователя
+   const stringTimeImproved = time?.toLocaleTimeString()
 
     return (
         <div>
@@ -55,12 +60,13 @@ function Clock() {
                 onMouseLeave={onMouseLeave}
                 className={css.time}
             >
-                {time}
+                {stringTimeImproved}
             </div>
 
             {show && (
                 <div className={css.date}>
-                    {stringDate}
+                    {stringDateImproved}
+                    {stringTimeImproved}
                 </div>
             )}
 

@@ -1,0 +1,9 @@
+.doubleRange_box {
+    display: flex;
+}
+
+.value_num {
+    display: inline-block;
+    width: 45px;
+    padding-left: 10px;
+}

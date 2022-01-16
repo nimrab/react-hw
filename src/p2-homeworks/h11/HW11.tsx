@@ -33,9 +33,9 @@ function HW11() {
                 // сделать так чтоб value1 и value2 изменялось
                 value={[value1 ?? 0, value2 ?? 100]}
                 onChangeRange={onChangeRange}
-                /*min={20}*/
-                /*max={80}*/
-               /* step={5}*/
+                min={20}
+                max={80}
+                step={5}
             />
 
 

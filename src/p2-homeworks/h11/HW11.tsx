@@ -19,7 +19,7 @@ function HW11() {
             homeworks 11
 
             {/*should work (должно работать)*/}
-            <div>
+            <div className={s.range_box}>
                 <span className={s.value_num}>{value1}</span>
                 <SuperRange
                     // сделать так чтоб value1 изменялось
@@ -28,15 +28,16 @@ function HW11() {
                 />
             </div>
 
-            <div className={s.doubleRange_box}>
-                <span className={s.value_num}>{value1}</span>
-                <SuperDoubleRange
-                    // сделать так чтоб value1 и value2 изменялось
-                    value={[value1 ??  0, value2 ?? 100]}
-                    onChangeRange={onChangeRange}
-                />
-                <span className={s.value_num}>{value2}</span>
-            </div>
+
+            <SuperDoubleRange
+                // сделать так чтоб value1 и value2 изменялось
+                value={[value1 ?? 0, value2 ?? 100]}
+                onChangeRange={onChangeRange}
+                /*min={20}*/
+                /*max={80}*/
+               /* step={5}*/
+            />
+
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
